@@ -1,0 +1,4 @@
+"Stratum","Role","Cases","Centers_or_sources","Inference_failure","Scoring_failure","Empty_prediction","Empty_ground_truth"
+"R2_TEST","Multicenter reference",288,24,"0%","0%","1.74%","0.00%"
+"SOOP","Single-source stress test",157,1,"0%","0%","5.73%","1.27%"
+"R3_NEW","Multicenter shift stratum",317,26,"0%","0%","4.73%","0.95%"

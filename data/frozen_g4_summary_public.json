@@ -1,0 +1,248 @@
+{
+  "protocol_id": "NEUROLRES-ATLAS-SHIFT-v1.2",
+  "artifact_role": "PUBLIC_AGGREGATE_G4_SUMMARY",
+  "status": "G4_FAIL_G5_NEGATIVE_POSITIONING_REQUIRED",
+  "fixed_n": 762,
+  "n_scored": 762,
+  "n_failed": 0,
+  "fixed_denominators": {
+    "R2_TEST": 288,
+    "SOOP": 157,
+    "R3_NEW": 317
+  },
+  "strata": {
+    "R2_TEST": {
+      "fixed_n": 288,
+      "n_scored": 288,
+      "inference_failure_rate": 0.0,
+      "scoring_failure_rate": 0.0,
+      "empty_prediction_rate": 0.017361111111111112,
+      "empty_ground_truth_rate": 0.0,
+      "dice": {
+        "mean": 0.6050464225939156,
+        "sd": 0.28919169071765305,
+        "median": 0.726283416361571,
+        "q1": 0.44784962009921686,
+        "q3": 0.8285717502152756,
+        "min": 0.0,
+        "max": 0.9336975045178164
+      },
+      "lesion_f1": {
+        "mean": 0.558296883838142,
+        "sd": 0.3365780516796124,
+        "median": 0.5,
+        "q1": 0.3333333333333333,
+        "q3": 1.0,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "pr_auc": {
+        "mean": 0.7123892430403459,
+        "sd": 0.29002253406027834,
+        "median": 0.8496297672611055,
+        "q1": 0.610202723339297,
+        "q3": 0.9211506745335043,
+        "min": 0.000026248035322598487,
+        "max": 0.9833514506655455
+      },
+      "abs_volume_difference_ml": {
+        "mean": 10.528750454115299,
+        "sd": 20.105388925486366,
+        "median": 2.1455001019057818,
+        "q1": 0.3524500122584868,
+        "q3": 11.422750542551512,
+        "min": 0.0,
+        "max": 168.72458725597244
+      },
+      "abs_lesion_count_difference": {
+        "mean": 1.5173611111111112,
+        "sd": 2.4294313256415623,
+        "median": 1.0,
+        "q1": 0.0,
+        "q3": 2.0,
+        "min": 0.0,
+        "max": 24.0
+      }
+    },
+    "SOOP": {
+      "fixed_n": 157,
+      "n_scored": 157,
+      "inference_failure_rate": 0.0,
+      "scoring_failure_rate": 0.0,
+      "empty_prediction_rate": 0.05732484076433121,
+      "empty_ground_truth_rate": 0.012738853503184714,
+      "dice": {
+        "mean": 0.5375163149908013,
+        "sd": 0.3530178833113055,
+        "median": 0.6630942164970813,
+        "q1": 0.10366376477803994,
+        "q3": 0.8461572194107999,
+        "min": 0.0,
+        "max": 0.9644397166096846
+      },
+      "lesion_f1": {
+        "mean": 0.4194611621306841,
+        "sd": 0.3092315255900796,
+        "median": 0.42857142857142855,
+        "q1": 0.14285714285714285,
+        "q3": 0.6666666666666666,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "pr_auc": {
+        "mean": 0.6771851869745661,
+        "sd": 0.33120946741492396,
+        "median": 0.8224176695283513,
+        "q1": 0.4860468815618781,
+        "q3": 0.9597819563549572,
+        "min": 0.0,
+        "max": 0.9956390323704358
+      },
+      "abs_volume_difference_ml": {
+        "mean": 13.671612955964983,
+        "sd": 28.79885008341516,
+        "median": 3.996897649951279,
+        "q1": 0.7886600094789173,
+        "q3": 12.097655542893335,
+        "min": 0.0009020775323733687,
+        "max": 246.27540241461247
+      },
+      "abs_lesion_count_difference": {
+        "mean": 3.8917197452229297,
+        "sd": 8.9818760659755,
+        "median": 2.0,
+        "q1": 1.0,
+        "q3": 3.0,
+        "min": 0.0,
+        "max": 87.0
+      }
+    },
+    "R3_NEW": {
+      "fixed_n": 317,
+      "n_scored": 317,
+      "inference_failure_rate": 0.0,
+      "scoring_failure_rate": 0.0,
+      "empty_prediction_rate": 0.0473186119873817,
+      "empty_ground_truth_rate": 0.00946372239747634,
+      "dice": {
+        "mean": 0.5392805672287724,
+        "sd": 0.3148819758417184,
+        "median": 0.613050944476245,
+        "q1": 0.3067907618062737,
+        "q3": 0.8139254678253453,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "lesion_f1": {
+        "mean": 0.4170842734666703,
+        "sd": 0.30643429255489935,
+        "median": 0.4,
+        "q1": 0.2222222222222222,
+        "q3": 0.625,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "pr_auc": {
+        "mean": 0.6355791188904923,
+        "sd": 0.32491909057805435,
+        "median": 0.7517530348303176,
+        "q1": 0.465159866536346,
+        "q3": 0.9064348276070147,
+        "min": 0.0,
+        "max": 0.9866880451003037
+      },
+      "abs_volume_difference_ml": {
+        "mean": 6.290629031949428,
+        "sd": 11.33728306535831,
+        "median": 1.768000083975494,
+        "q1": 0.4269870190182701,
+        "q3": 6.800000322982669,
+        "min": 0.0,
+        "max": 107.90647258399986
+      },
+      "abs_lesion_count_difference": {
+        "mean": 2.5678233438485805,
+        "sd": 3.4676588051518293,
+        "median": 1.0,
+        "q1": 0.0,
+        "q3": 3.0,
+        "min": 0.0,
+        "max": 28.0
+      }
+    }
+  },
+  "primary": {
+    "endpoint": "center-macro lesion-wise F1",
+    "comparison": "R2_TEST - R3_NEW",
+    "R2_TEST": {
+      "n_centers": 24,
+      "center_macro_lesion_f1": 0.5326628541384048
+    },
+    "R3_NEW": {
+      "n_centers": 26,
+      "center_macro_lesion_f1": 0.4098735727182776
+    },
+    "observed_R2_TEST_minus_R3_NEW": 0.12278928142012713,
+    "percentile_95_ci": [
+      -0.0002517837264285266,
+      0.24425639077087632
+    ],
+    "bootstrap_p_two_sided": 0.050994900509949,
+    "bootstrap_repetitions": 10000,
+    "bootstrap_seed": 260827,
+    "center_union_n": 46,
+    "G4_criteria": {
+      "delta_at_least_0_05": true,
+      "ci_lower_greater_than_0": false,
+      "p_less_than_0_05": false
+    }
+  },
+  "SOOP_conditional_case_bootstrap_95_ci": {
+    "dice": {
+      "observed_mean": 0.5375163149908013,
+      "ci_lower": 0.48191778387912765,
+      "ci_upper": 0.5907204942840152
+    },
+    "lesion_f1": {
+      "observed_mean": 0.4194611621306841,
+      "ci_lower": 0.3705726383901559,
+      "ci_upper": 0.46668276183871904
+    },
+    "pr_auc": {
+      "observed_mean": 0.6771851869745661,
+      "ci_lower": 0.6246681477134994,
+      "ci_upper": 0.7275537442803127
+    },
+    "abs_volume_difference_ml": {
+      "observed_mean": 13.671612955964983,
+      "ci_lower": 9.64771479848625,
+      "ci_upper": 18.543810953186895
+    },
+    "abs_lesion_count_difference": {
+      "observed_mean": 3.8917197452229297,
+      "ci_lower": 2.6751592356687897,
+      "ci_upper": 5.43312101910828
+    },
+    "empty_prediction_rate": {
+      "observed_mean": 0.05732484076433121,
+      "ci_lower": 0.025477707006369428,
+      "ci_upper": 0.09554140127388536
+    }
+  },
+  "G4_pass": false,
+  "claim_boundary": "NO_PRESPECIFIED_MEANINGFUL_DECLINE_CLAIM; NEGATIVE_EXTERNAL_VALIDATION_ROBUSTNESS_POSITIONING_ONLY",
+  "formal_g4_scorer_sha256": "0fe6631bcd50aabe1289422e3913ed31c0ebff96cd2a5b9c2cb85308e35c1732",
+  "g4_lock_sha256": "792cf3f39e5a4965c9da86ac8cbdffa4fc72fc0b1c2faa16382405508214d746",
+  "g4_preflight_sha256": "3fa592ac40c778a5c0afb4a13cef5d9c8251134db1894c41f647d32bb41cbe8e",
+  "g4_launch_receipt_sha256": "6ebf0764f5236775c8b187b1edbd3d13f9397a109e500c81032f1e18f4915b33",
+  "g3_triplet_manifest_sha256": "b35b5ea9fea7ba08a2db8260e855f72ab032f2dd9df8d43aaffd5b988433c6dd",
+  "official_scorer_sha256": "73668f48b70a56fe1ce785701595627ac3a6086412fb0f85b211ff7dc09ffcfd",
+  "pilot36_included": false,
+  "sample_replacement": false,
+  "geometry_scoring_rule": "ARRAY_INDEX_NO_RESAMPLING_E2",
+  "shape_equality_required": true,
+  "voxel_size_absolute_tolerance": 0.000001,
+  "prediction_resampling": false,
+  "gt_resampling": false,
+  "header_anomalies_disclosed": 5
+}

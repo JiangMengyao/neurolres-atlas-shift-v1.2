@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.Rhistory
+.RData
+data/authorized/
+case_json/
+*.nii
+*.nii.gz
+*.npz
+*.pkl
+*.jsonl
+*.tiff

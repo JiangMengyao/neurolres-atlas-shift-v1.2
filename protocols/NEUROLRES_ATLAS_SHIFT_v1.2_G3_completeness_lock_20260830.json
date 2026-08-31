@@ -1,0 +1,47 @@
+{
+  "protocol_id": "NEUROLRES-ATLAS-SHIFT-v1.2",
+  "artifact_role": "FORMAL_762_G3_COMPLETENESS_LOCK",
+  "created_utc": "2026-08-30T14:42:52Z",
+  "status": "G3_CHECKER_LOCKED_NOT_RUN",
+  "fixed_denominators": {
+    "R2_TEST": 288,
+    "SOOP": 157,
+    "R3_NEW": 317,
+    "total": 762
+  },
+  "gate_definition": {
+    "minimum_success_rate_per_stratum": 0.95,
+    "case_success_requires": [
+      "nonempty_NIfTI_NPZ_PKL_triplet",
+      "NIfTI_gzip_CRC_and_header_valid",
+      "NPZ_ZIP_CRC_and_softmax_member_valid",
+      "PKL_opcode_stream_valid"
+    ],
+    "batch_integrity_requires": [
+      "frozen_artifact_hashes_match",
+      "mapping_has_exact_762_unique_tokens_and_fixed_strata",
+      "mapping_output_paths_match_token_contract",
+      "observed_output_sets_equal_mapping_sets",
+      "zero_temporary_output_files",
+      "latest_run_has_explicit_completion_marker",
+      "latest_run_has_locked_parameters_and_no_fatal_match",
+      "zero_related_inference_processes"
+    ]
+  },
+  "locked_sha256": {
+    "checker": "7f38eb2a041dd56b5534d87e60adfebd2ca3cc91c1d73b42db8630e484eb3374",
+    "freeze_manifest": "010803fc76767eeedb157dbc7ae8df016ee0dcd2bb482c20aaf3917cd406019e",
+    "formal_execution_lock": "c8973d822a5b7bec01166f08f40dfa470463834b2c2969e6cf8ade73f7222b69",
+    "formal_preparation_state": "00976907d0e32fb1e5e16347e5a24ee0b1497861ef94973b25e4d4d442183783",
+    "restricted_token_mapping": "3d50730735050aacb65e88634b4ca83ae2ecf43f23790f750d60e847d01d1b1d",
+    "formal_runner": "a81ef92bc9eb744962f3770de2154b7785f367331c6fcca452d5a7b559accb70"
+  },
+  "prohibited_access": {
+    "ground_truth": true,
+    "effect_scoring": true,
+    "probability_value_interpretation": true,
+    "G4_execution_in_same_authorization": true
+  },
+  "failure_action": "STOP_PRESERVE_OUTPUTS_DO_NOT_SCORE_G4",
+  "pass_action": "RECORD_G3_PASS; G4_REQUIRES_SEPARATE_AUTHORIZATION"
+}

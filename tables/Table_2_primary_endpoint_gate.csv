@@ -1,0 +1,7 @@
+"Component","Frozen_result","Criterion","Pass"
+"R2_TEST center-macro lesion-wise F1","0.5327","-","-"
+"R3_NEW center-macro lesion-wise F1","0.4099","-","-"
+"Difference","0.1228","at least 0.05","Yes"
+"Percentile 95% CI","-0.00025 to 0.24426","lower bound above 0","No"
+"Two-sided bootstrap p","0.05099","below 0.05","No"
+"Conjunctive G4 gate","Failed","all three conditions","No"

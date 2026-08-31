@@ -1,0 +1,99 @@
+{
+  "protocol_id": "NEUROLRES-ATLAS-SHIFT-v1.2",
+  "artifact_role": "FORMAL_762_G5_NEGATIVE_POSITIONING_LOCK",
+  "created_at_utc": "2026-08-31T09:14:06Z",
+  "status": "G5_AUTHORIZED_LOCKED_BEFORE_POSITIONING_DRAFT",
+  "authorization": {
+    "user_explicit_authorization": true,
+    "user_command": "授权按冻结方案建立 G5 负向定位锁，冻结 G4 结果并形成结果解读、表图方案与论文定位，不新增事后亚组或救援分析。",
+    "authorization_date_asia_shanghai": "2026-08-31",
+    "authorized_outputs": [
+      "result-bounded interpretation of the completed G4 output",
+      "table and figure plan using only frozen analyses",
+      "manuscript positioning and claim-language boundaries"
+    ],
+    "not_authorized": [
+      "new subgroup, sensitivity, threshold, model, fold, endpoint, or resampling analysis",
+      "sample expansion, replacement, exclusion, or Pilot-36 reinclusion",
+      "alternative confidence intervals, p-values, bootstrap definitions, or multiplicity rules",
+      "clinical outcome, mechanism, deployment, or superiority-to-clinician claims",
+      "publication or submission"
+    ]
+  },
+  "G4_frozen_result": {
+    "status": "G4_FAIL_G5_NEGATIVE_POSITIONING_REQUIRED",
+    "fixed_n": 762,
+    "n_scored": 762,
+    "n_failed": 0,
+    "primary_endpoint": "center-macro lesion-wise F1",
+    "primary_comparison": "R2_TEST - R3_NEW",
+    "R2_TEST_center_macro": 0.5326628541384048,
+    "R3_NEW_center_macro": 0.4098735727182776,
+    "observed_delta": 0.12278928142012713,
+    "percentile_95_ci": [
+      -0.0002517837264285266,
+      0.24425639077087632
+    ],
+    "bootstrap_p_two_sided": 0.050994900509949,
+    "bootstrap_repetitions": 10000,
+    "bootstrap_seed": 260827,
+    "criteria": {
+      "delta_at_least_0_05": true,
+      "ci_lower_greater_than_0": false,
+      "p_less_than_0_05": false
+    },
+    "G4_pass": false
+  },
+  "G5_claim_contract": {
+    "mandatory_positioning": "negative external validation and robustness evaluation",
+    "must_state": [
+      "the point estimate was compatible with a decline larger than the prespecified effect threshold",
+      "the confidence interval included zero",
+      "the two-sided bootstrap p value did not meet the prespecified less-than-0.05 criterion",
+      "the conjunctive G4 gate therefore failed",
+      "the study does not support the prespecified meaningful multicenter temporal/source-shift decline claim"
+    ],
+    "prohibited_phrases_or_inferences": [
+      "statistically significant decline",
+      "borderline significant",
+      "marginally significant",
+      "trend toward significance",
+      "near-significant evidence",
+      "equivalence or non-inferiority",
+      "robustness proven",
+      "clinical benefit or clinical readiness",
+      "mechanistic explanation",
+      "superior to clinicians"
+    ],
+    "SOOP_boundary": "single-source descriptive stress test only; no cross-center generalization claim",
+    "v1_1_boundary": "do not merge Pilot-36 with v1.2 and do not claim replication of default-TTA inference",
+    "E2_boundary": "disclose five retained header anomalies; array-index scoring; no ground-truth or prediction resampling"
+  },
+  "manuscript_contract": {
+    "target_journal_from_frozen_protocol": "Neurological Research",
+    "article_type_from_frozen_protocol": "Original Research Article",
+    "frozen_suggested_title": "Temporal and source robustness of a resource-efficient five-fold stroke-lesion segmentation ensemble: multicenter external evaluation with a single-source stress test",
+    "primary_story": "a prespecified multicenter external evaluation produced a sizeable directional point estimate but did not satisfy the full inferential gate; uncertainty and source dependence, not a confirmed decline, define the result",
+    "tables_planned": 3,
+    "main_figures_planned": 3,
+    "supplementary_items_planned": 4,
+    "new_statistics_permitted": false
+  },
+  "locked_sha256": {
+    "protocol": "66af57ab785bca729d6549184b661118d7961a8c3d9692caf1b11469fa377749",
+    "formal_g4_scorer_r2": "0fe6631bcd50aabe1289422e3913ed31c0ebff96cd2a5b9c2cb85308e35c1732",
+    "g4_self_test_r2": "48281bfd2ae10d841efa3bef1847be361777786e99e497c6c56873b95c589065",
+    "g4_resume2_lock": "792cf3f39e5a4965c9da86ac8cbdffa4fc72fc0b1c2faa16382405508214d746",
+    "g4_resume2_preflight": "3fa592ac40c778a5c0afb4a13cef5d9c8251134db1894c41f647d32bb41cbe8e",
+    "g4_resume2_launch_receipt": "6ebf0764f5236775c8b187b1edbd3d13f9397a109e500c81032f1e18f4915b33",
+    "g4_summary": "ad02737f60272bb5ab86dc665e9b9eb009538da8c50c83aa29da93b74b12c4f0",
+    "g4_completion_integrity_audit": "63e686e95f5ceb5430eff9c197d7299ca771b4beb5c127a12832b894f107b9a5",
+    "restricted_case_metrics": "717a853f203b24adab92935cb046c8778cee994db17ca355ede21caab4c44f90",
+    "restricted_primary_details": "b0b31ddc3328d0b309f32f7592f582da4b7a3bc6e30e73a7c215dae36467df79",
+    "restricted_worker_log_r2": "8b2495f9f1dfd0fd50ec87686fbc655ad926bd5c678e5c7a9ecf3248a3e025d3",
+    "erratum_E1": "1826339027534becd8bb434cda6b8158bd7c6781023c15e55ab20196db93797b",
+    "erratum_E2": "0b5126605f350e258eea46d1d1bb5a57c4f3dbd5c1b678e62a214263ccb591ad"
+  },
+  "positioning_output": "results/NEUROLRES_ATLAS_SHIFT_v1.2_G5_negative_positioning_package_20260831.md",
+  "next_action": "DRAFT_G5_PACKAGE_FROM_FROZEN_G4_SUMMARY_ONLY"
+}

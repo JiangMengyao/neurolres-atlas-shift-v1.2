@@ -1,0 +1,4 @@
+Anomaly_group,n_pairs,Selected_orientation_codes,Selected_affine_delta_mm,Best_qform_pair_delta_mm,Handling
+Orientation codes equal,3,Equal,"0.0010757; 3.191391; 10.107574","0; approximately 0; 0.0010757","Retained under E2; unchanged array-index scoring; no resampling"
+Orientation codes unequal,2,Unequal,"239.062500 for both pairs","0 and 1.875","Retained under E2; unchanged array-index scoring; no resampling"
+All flagged pairs,5,"3 equal; 2 unequal","0.0010757 to 239.062500","0 to 1.875","All retained; no header repair; no exclusion after result access"

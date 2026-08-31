@@ -1,0 +1,8 @@
+Metric,Definition,Direction_of_better_performance,Role
+Dice,Case-level overlap between binary prediction and ground truth,Higher,Descriptive secondary metric
+Lesion-wise F1,Case-level lesion matching F1 from the official scorer,Higher,Primary endpoint at center-macro level and descriptive case-level metric
+Soft-map PR-AUC,Case-level precision-recall area from the frozen soft probability map,Higher,Descriptive secondary metric
+Absolute volume difference (mL),Absolute difference between predicted and ground-truth lesion volume,Lower,Descriptive secondary metric
+Absolute lesion-count difference,Absolute difference between predicted and ground-truth lesion counts,Lower,Descriptive secondary metric
+Empty prediction rate,Proportion of cases with no predicted foreground,Lower,Execution/output quality descriptor
+Empty ground truth rate,Proportion of cases with no ground-truth foreground,Lower,Data-quality descriptor
