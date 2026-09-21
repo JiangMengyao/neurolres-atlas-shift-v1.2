@@ -52,8 +52,8 @@ Correspondence: Mengyao Jiang, 24011280031@stu.hebmu.edu.cn.
 
 ## Citation
 
-Use the metadata in `CITATION.cff`. A DOI has not yet been assigned to this GitHub archive.
+Use the metadata in `CITATION.cff`. The v1.2.0 GitHub release is archived in Zenodo at https://doi.org/10.5281/zenodo.22868192. The DOI identifies the exact release archive and is linked to the repository and `v1.2.0` release.
 
 ## Licence
 
-No software licence has yet been assigned. Public visibility does not by itself grant reuse rights. The authors should select and add an appropriate software licence before submission if open-source reuse is intended.
+This code archive is released under the MIT License. See `LICENSE` for the full text. The source imaging data remain subject to the applicable terms of their original repositories.

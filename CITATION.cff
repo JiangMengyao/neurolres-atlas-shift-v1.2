@@ -2,7 +2,8 @@ cff-version: 1.2.0
 message: "If you use this code archive, please cite the associated manuscript and this repository."
 title: "NEUROLRES-ATLAS-SHIFT v1.2 reproducibility archive"
 type: software
-version: "1.2"
+license: MIT
+version: "1.2.0"
 date-released: "2026-08-31"
 authors:
   - family-names: Jiang
@@ -13,6 +14,9 @@ authors:
     given-names: Zimo
     affiliation: "Department of Basic Medical Sciences, Hebei Medical University"
 repository-code: "https://github.com/JiangMengyao/neurolres-atlas-shift-v1.2"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22868192"
 keywords:
   - stroke lesion segmentation
   - external evaluation
