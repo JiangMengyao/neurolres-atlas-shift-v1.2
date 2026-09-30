@@ -1,0 +1,8 @@
+Candidate,Year,Model family,Public checkpoint,Training resource versus formal 762,Same-cohort status,Locked role or exclusion reason
+MAPPING Default,2022,3D nnU-Net,Yes,"ATLAS R2 655; audited zero case-level overlap",Executed,Reference model
+MAPPING DiceTopK10,2022,3D nnU-Net with DiceTopK10 loss,Yes,"ATLAS R2 655; audited zero case-level overlap",Outcome-blinded feasibility only,"Not scored; projected full-run cost exceeded 250 wall-clock hours on the CPU-only host"
+MAPPING residual nnU-Net,2022,3D residual nnU-Net,Yes,"ATLAS R2 655; audited zero case-level overlap",Not executed,"Not scored after pre-result feasibility amendment; no numerical performance estimate"
+SynthStroke Synth,2025,MONAI 3D U-Net with synthetic and real-data mixing,Yes; immutable Hugging Face revision,"ATLAS R2 655 resource plus OASIS-3-derived synthetic images; audited zero case-level overlap",Executed,"Exploratory methodologically distinct contemporary comparator; no architecture-superiority test"
+MSCSA,2025,Multi-stage cross-scale attention U-Net,No retrievable checkpoint in official repository,"ATLAS v2.0; exact published checkpoint unavailable",Not executed,Code-only release and five-fold retraining infeasible on the CPU-only host
+BrainSegFounder ATLAS-finetune,2023,SwinUNETR foundation model,Yes,"Model card reports 1271 ATLAS subjects; overlap with formal cases cannot be excluded",Ineligible,Training-evaluation independence not established
+ISLES26 center-grouped nnU-Net,2026,nnU-Net v2 DiceTopK10,Yes,"Model card reports training on the full 1452-case public release including formal cases",Ineligible,Direct training-evaluation overlap

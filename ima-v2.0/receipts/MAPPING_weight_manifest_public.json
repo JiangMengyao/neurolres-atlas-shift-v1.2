@@ -1,0 +1,126 @@
+{
+  "source_share": "https://emckclac-my.sharepoint.com/:f:/g/personal/k21066681_kcl_ac_uk/EnR3LgIE5D5En1c2vSlzPkgBnzKJJ8Cly_2T56srvbu67A",
+  "models": {
+    "dtk10": {
+      "remote_folder": "ISLES_Challenge_Model_Weights/ATLAS_R2/3d_fullres/Task100_ATLAS_v2/nnUNetTrainerV2_800epochs_Loss_DiceTopK10__nnUNetPlansv2.1",
+      "files": [
+        {
+          "relative_path": "fold_0/model_final_checkpoint.model",
+          "size": 249774139,
+          "sha256": "903729fdebdcaefb2d739544f18b9360f6e6734f3d2afa7f98ab1d993e1554d9"
+        },
+        {
+          "relative_path": "fold_0/model_final_checkpoint.model.pkl",
+          "size": 206581,
+          "sha256": "eb04d83d8a4aff93ddae7973c65db1e3fbf4099a02dc35df7c2f5482dc1b2c02"
+        },
+        {
+          "relative_path": "fold_1/model_final_checkpoint.model",
+          "size": 249774203,
+          "sha256": "fa6b895aad70f70ba880fc40ad1763c76c9086ea764b891750c1707b2b347e10"
+        },
+        {
+          "relative_path": "fold_1/model_final_checkpoint.model.pkl",
+          "size": 206581,
+          "sha256": "1de67a333158852de048d245dacfa0e18b58d2e4022ccdf54f18b3ef8aa2322c"
+        },
+        {
+          "relative_path": "fold_2/model_final_checkpoint.model",
+          "size": 249774075,
+          "sha256": "07239bcb83a3ca0cb9373a23953747da7be81514556984f1bfac71065fe3dd79"
+        },
+        {
+          "relative_path": "fold_2/model_final_checkpoint.model.pkl",
+          "size": 206581,
+          "sha256": "0ff45673b3e4d7663195897241a54dd6a7b4a6b82b7ec15763213cd6fbc753f7"
+        },
+        {
+          "relative_path": "fold_3/model_final_checkpoint.model",
+          "size": 249774075,
+          "sha256": "c73df69f3ec7da3c64cb9d6d86f383689fb441dfec4f0d88b221c33efd5415ea"
+        },
+        {
+          "relative_path": "fold_3/model_final_checkpoint.model.pkl",
+          "size": 206581,
+          "sha256": "66173708b0a01d31391d73a670862d10db6610f8fec0934187d1207405641381"
+        },
+        {
+          "relative_path": "fold_4/model_final_checkpoint.model",
+          "size": 249774075,
+          "sha256": "70e4d115dff89dadbc2fc9762593f8ed76a7704ee88f38a67e08a87f350b3545"
+        },
+        {
+          "relative_path": "fold_4/model_final_checkpoint.model.pkl",
+          "size": 206581,
+          "sha256": "f8e130626d8ebb1dd2fd10814d638eec96679a816b1a76ea27b668e7faf216cd"
+        },
+        {
+          "relative_path": "plans.pkl",
+          "size": 211237,
+          "sha256": "492762303652258c615d2ac68a52a2a2a0875d01ac80963eb4dc7e197a8cd1c9"
+        }
+      ]
+    },
+    "resunet": {
+      "remote_folder": "ISLES_Challenge_Model_Weights/ATLAS_R2/3d_fullres/Task100_ATLAS_v2/nnUNetTrainerV2_ResencUNet_DA3__nnUNetPlans_FabiansResUNet_v2.1",
+      "files": [
+        {
+          "relative_path": "fold_0/model_final_checkpoint.model",
+          "size": 618356181,
+          "sha256": "dacdd21bbeac93f7a3d0bc827b20b0e4e6b021464234958b5110ba1a3316a7ad"
+        },
+        {
+          "relative_path": "fold_0/model_final_checkpoint.model.pkl",
+          "size": 218509,
+          "sha256": "84b518f6a35f056e40d4f4accd50d06fb42553784d8f207ce72f0ae6df03c7e8"
+        },
+        {
+          "relative_path": "fold_1/model_final_checkpoint.model",
+          "size": 618356181,
+          "sha256": "dcefdd6f5fb2bba5adac89ee3ce30933933ccf8b634694b784738fe88dc7d037"
+        },
+        {
+          "relative_path": "fold_1/model_final_checkpoint.model.pkl",
+          "size": 202734,
+          "sha256": "4b442cf90583ede62fda20cacf7f688000eff16590748340fb1b076f8db30023"
+        },
+        {
+          "relative_path": "fold_2/model_final_checkpoint.model",
+          "size": 618356117,
+          "sha256": "5a1298590941ac052fe353b7924ae7c9aea9ca7f4ad6c1bf9a1648b0e5a97ce5"
+        },
+        {
+          "relative_path": "fold_2/model_final_checkpoint.model.pkl",
+          "size": 218509,
+          "sha256": "8bf0df81e786262bd3aaf8244e86bed194767c8a18e87282edefe40fb55974cc"
+        },
+        {
+          "relative_path": "fold_3/model_final_checkpoint.model",
+          "size": 618356117,
+          "sha256": "aab23028b46fe9d6c4800a314e787f8af8cddf64ef9b711c89201c10885c0685"
+        },
+        {
+          "relative_path": "fold_3/model_final_checkpoint.model.pkl",
+          "size": 206688,
+          "sha256": "e5c9b5bf78ec61a590dcd56c71b172a7ff7b3c475f37d6a81f60e2ce8b80f819"
+        },
+        {
+          "relative_path": "fold_4/model_final_checkpoint.model",
+          "size": 618356181,
+          "sha256": "65dbddf0c2084dd006cce325e54e3e864eec670daa824491ad07f7e271e88aa0"
+        },
+        {
+          "relative_path": "fold_4/model_final_checkpoint.model.pkl",
+          "size": 218509,
+          "sha256": "75d89ccd594661f4add3e3b0e308de560192a7390eb64c09b172ab64564c499a"
+        },
+        {
+          "relative_path": "plans.pkl",
+          "size": 206069,
+          "sha256": "39416001d025d9e12194c4dfee46427e8771e97799177817b936dec243ec19d1"
+        }
+      ]
+    }
+  },
+  "restricted_manifest_sha256": "55dada49df444dded8b6f6dbeb4704fcacefc01c7fc1304eceba085a32798f04"
+}

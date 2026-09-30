@@ -1,0 +1,55 @@
+{
+  "protocol_id": "IMA-UPGRADE-v1.0-QUALITATIVE-DISPLAY",
+  "locked_at_utc": "2026-09-29T07:16:00Z",
+  "status": "LOCKED_BEFORE_CASE_SELECTION_AND_IMAGE_REVIEW",
+  "relationship_to_primary_analysis": "Exploratory presentation extension performed after the frozen primary analysis; it does not alter the cohort, endpoint, decision rule, estimates, or interpretation of the primary result.",
+  "inputs": {
+    "mapping": {
+      "path": "data/authorized/atlas_r3/formal_v1.2/inference/restricted_token_mapping.csv",
+      "sha256": "3d50730735050aacb65e88634b4ca83ae2ecf43f23790f750d60e847d01d1b1d"
+    },
+    "case_metrics": {
+      "path": "data/authorized/atlas_r3/formal_v1.2/metrics/NEUROLRES_ATLAS_SHIFT_v1.2_formal_case_metrics.csv",
+      "sha256": "717a853f203b24adab92935cb046c8778cee994db17ca355ede21caab4c44f90"
+    },
+    "formal_scoring_lock": {
+      "path": "protocols/NEUROLRES_ATLAS_SHIFT_v1.2_G4_formal_scoring_lock_20260831.json",
+      "sha256": "538ed3cb6b0e7d27a5be0c140e76ab98d6e168964bcd659110e02a0084395b7b"
+    }
+  },
+  "eligible_cases": "All 762 formal cases with status PASS and non-empty ground truth. No case is excluded on prediction quality, Dice, lesion-wise F1, PR-AUC, center, or visual appearance.",
+  "selection_rule": {
+    "strata": ["R2_TEST", "R3_NEW", "SOOP"],
+    "lesion_burden": "Ground-truth lesion volume in millilitres, calculated as gt_voxels multiplied by voxel_volume_ml.",
+    "bands": {
+      "small": "Volume at or below the within-stratum 25th percentile.",
+      "large": "Volume at or above the within-stratum 75th percentile."
+    },
+    "case_per_stratum_band": 1,
+    "tie_breaker": "Select the lexicographically smallest SHA-256 digest of token|IMA-QUAL-V1-20260929|band among eligible candidates.",
+    "performance_blinding": "Only token, stratum, gt_voxels, gt_empty, status, and voxel_volume_ml may enter the selection function. Prediction-derived metrics are merged only after the six tokens have been fixed and written to the selection receipt."
+  },
+  "display_rule": {
+    "orientation": "Closest-canonical RAS; axial plane.",
+    "slice": "Slice with the largest ground-truth lesion area; ties resolved by the lowest slice index.",
+    "intensity": "Per-case global nonzero T1 1st to 99.5th percentile linear window; no local or selective enhancement.",
+    "full_view_crop": "Bounding box of nonzero voxels on the selected T1 slice with fixed eight-pixel padding, clipped to image bounds.",
+    "zoom": "Ground-truth lesion bounding box on the selected slice, expanded to a square with at least 28 pixels of padding and clipped to image bounds.",
+    "overlays": "Ground truth in cyan and prediction in magenta; contours are drawn from unchanged binary arrays.",
+    "scale_bar": "20 mm, derived from the NIfTI voxel spacing.",
+    "labels": "Anonymous case letter, source stratum, lesion-burden band, ground-truth volume, case-level Dice, and lesion-wise F1."
+  },
+  "figure_contract": {
+    "core_conclusion": "The locked ensemble shows visibly heterogeneous lesion delineation across source strata and lesion burdens, while qualitative examples are selected independently of model performance.",
+    "evidence_chain": "Three source strata by two lesion-burden bands; each panel links the full axial slice, a lesion-centred inset, unchanged ground truth and prediction contours, and fixed case-level metrics.",
+    "archetype": "Image plate plus quantitative annotations",
+    "backend": "Python only",
+    "exports": ["SVG", "PDF", "TIFF 600 dpi", "PNG 300 dpi"]
+  },
+  "prohibited_actions": [
+    "Replacing a selected case after viewing its image or performance",
+    "Changing the selected slice manually",
+    "Using this figure to claim prospective, independent, or clinical validation",
+    "Recasting the frozen primary analysis as statistically significant"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Source robustness and predictive uncertainty of two stroke lesion segmentation models: a 762-case public benchmark - reproducibility archive",
+  "upload_type": "software",
+  "publication_date": "2026-09-30",
+  "description": "Reproducibility archive for a fixed-denominator, same-cohort evaluation of two immutable stroke lesion segmentation pipelines on 762 publicly released T1-weighted MRI cases. Version 2.0 preserves the original prespecified inconclusive source-stratum result and adds a complete comparison with SynthStroke, probability calibration, uncertainty-error association, risk-coverage analysis, and performance-blinded qualitative examples. The archive contains code, frozen protocols and amendments, aggregate non-identifying results, figure source data, and reproducibility receipts. It excludes patient-level images, masks, predictions, probability arrays, complete case-level metrics, source filenames, worker assignments, and subject-to-center linkage records.",
+  "access_right": "open",
+  "license": "MIT",
+  "version": "2.0.0",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Jiang, Mengyao",
+      "orcid": "0009-0003-6210-5270",
+      "affiliation": "Department of Basic Medical Sciences, Hebei Medical University"
+    },
+    {
+      "name": "Zhao, Zimo",
+      "affiliation": "Department of Basic Medical Sciences, Hebei Medical University"
+    }
+  ],
+  "keywords": [
+    "stroke lesion segmentation",
+    "same-cohort model comparison",
+    "predictive uncertainty",
+    "reproducibility",
+    "nnU-Net",
+    "SynthStroke",
+    "medical image analysis"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/JiangMengyao/neurolres-atlas-shift-v1.2",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://doi.org/10.5281/zenodo.22868192",
+      "relation": "isNewVersionOf",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://isles-26.grand-challenge.org/dataset/",
+      "relation": "requires",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://doi.org/10.1038/s41597-022-01401-7",
+      "relation": "requires",
+      "resource_type": "dataset"
+    }
+  ]
+}

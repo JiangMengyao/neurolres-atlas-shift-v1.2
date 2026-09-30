@@ -1,0 +1,57 @@
+{
+  "protocol_extension_id": "IMA-UPGRADE-v2.0-E2-SynthStroke-exploratory",
+  "locked_date": "2026-09-29",
+  "lock_timing": "before SynthStroke pilot inference and before any SynthStroke formal outcome scoring",
+  "parent_protocol": {
+    "path": "protocols/IMA_UPGRADE_v2.0_multimodel_uncertainty_lock_20260929.json",
+    "sha256": "4a6a1421310231ac21ae251a8aff7c1e22ef8bbedbb01a7d3e43c1dfafaf3b21"
+  },
+  "rationale": "Add one contemporary model from a different implementation and training family to address the single-family limitation without changing the two prespecified primary upgrade comparisons.",
+  "model": {
+    "model_id": "liamchalcroft/synthstroke-synth",
+    "publication": "Chalcroft et al., Synthetic Data for Robust Stroke Segmentation, Machine Learning for Biomedical Imaging, 2025, doi:10.59275/j.melba.2025-f3g6",
+    "architecture": "MONAI 3D U-Net with six output classes",
+    "training": "mixed synthetic images derived from OASIS-3 tissue maps and ATLAS R2 lesion masks plus real ATLAS R2 training images",
+    "atlas_resource_n": 655,
+    "atlas_split": "419 training, 105 validation, 131 held-out test",
+    "formal_training_evaluation_overlap": "zero at the 655-case ATLAS R2 resource level versus the fixed 762-case formal evaluation cohort, established by the frozen identifier audit",
+    "hugging_face_revision": "ced72e683ed68d3d110b675714e1a07bac584948",
+    "model_sha256": "328c2b49cdbc865fb327c35b341dfa306a3ffbf17363e20e9694da3271a6066c",
+    "config_sha256": "f94329dfb3a6ba7cde86d640f79bc54927c32d72ca8fe08b7a9f7ff9b798fbf8",
+    "vendor_repository": "https://github.com/liamchalcroft/SynthStroke",
+    "vendor_commit": "f627b57b8f9291bfa870cb54cb21ddbeb4941d39"
+  },
+  "execution": {
+    "runner": "scripts/ima_upgrade_20260929/run_synthstroke_comparator.py",
+    "runner_sha256": "1c0fce88060f4a89e7acb76be5a4ea163c50baa0ab15a8cec06e53cf2a88abeb",
+    "fixed_n": 762,
+    "pilot_tokens": ["v12f0001", "v12f0289", "v12f0446"],
+    "preprocessing": "published inference path: RAS orientation, 1-mm isotropic spacing, histogram normalization, whole-volume intensity normalization, inverse transformation to native array shape",
+    "patch_size": 192,
+    "tta": false,
+    "mc_dropout": false,
+    "postprocessing": "none",
+    "binary_prediction_rule": "argmax across six native-space class probabilities equals stroke class 5",
+    "foreground_probability": "native-space stroke class-5 posterior",
+    "ground_truth_access_during_pilot": false
+  },
+  "analysis_role": {
+    "classification": "exploratory contemporary out-of-family comparator",
+    "included_in_primary_Holm_family": false,
+    "reported_endpoints": "the same descriptive metrics, source-stratified center-macro lesion-wise F1, source gap, calibration, and uncertainty summaries as the locked model family",
+    "permitted_claim": "descriptive same-cohort contrast under different preprocessing and training design",
+    "prohibited_claims": [
+      "architecture superiority",
+      "independent prospective clinical validation",
+      "deployment readiness",
+      "causal attribution of source differences"
+    ]
+  },
+  "stop_rules": [
+    "stop before scoring if the three-case outcome-blinded pilot cannot restore exact native array shape",
+    "stop before scoring if model or configuration hashes drift",
+    "stop before scoring if any formal case fails to produce nonempty NIfTI, NPZ, and PKL outputs",
+    "do not tune probability thresholds, preprocessing, TTA, postprocessing, or case subsets after formal outcomes are opened",
+    "report null or adverse performance without removing the model"
+  ]
+}

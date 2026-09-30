@@ -1,10 +1,10 @@
 cff-version: 1.2.0
-message: "If you use this code archive, please cite the associated manuscript and this repository."
-title: "NEUROLRES-ATLAS-SHIFT v1.2 reproducibility archive"
+message: "If you use this archive, cite the version-specific Zenodo record and the associated manuscript."
+title: "Source robustness and predictive uncertainty of two stroke lesion segmentation models: a 762-case public benchmark - reproducibility archive"
 type: software
 license: MIT
-version: "1.2.0"
-date-released: "2026-08-31"
+version: "2.0.0"
+date-released: "2026-09-30"
 authors:
   - family-names: Jiang
     given-names: Mengyao
@@ -16,9 +16,12 @@ authors:
 repository-code: "https://github.com/JiangMengyao/neurolres-atlas-shift-v1.2"
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.22868192"
+    value: "10.5281/zenodo.22868191"
 keywords:
   - stroke lesion segmentation
-  - external evaluation
+  - same-cohort model comparison
+  - predictive uncertainty
   - reproducibility
   - nnU-Net
+  - SynthStroke
+  - medical image analysis

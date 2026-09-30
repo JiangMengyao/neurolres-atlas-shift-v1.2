@@ -1,0 +1,39 @@
+{
+  "protocol_amendment_id": "IMA-UPGRADE-v2.0-E4-comparator-feasibility",
+  "recorded_date": "2026-09-29",
+  "timing": "after outcome-blinded inference timing and before any comparator ground-truth scoring or effect access",
+  "parent_protocol": {
+    "path": "protocols/IMA_UPGRADE_v2.0_multimodel_uncertainty_lock_20260929.json",
+    "sha256": "4a6a1421310231ac21ae251a8aff7c1e22ef8bbedbb01a7d3e43c1dfafaf3b21"
+  },
+  "reason": "The first complete DiceTopK10 five-fold CPU inference case required approximately 10 minutes and the next larger case remained incomplete after a further eight minutes. Extrapolation to both 762-case MAPPING variants exceeded 250 wall-clock hours on the available host. This resource decision was made without ground-truth scoring, performance inspection, threshold tuning, case replacement, or endpoint changes.",
+  "feasibility_observation": {
+    "model": "MAPPING_DTK10",
+    "pilot_case_completed": "v12f0001",
+    "pilot_prediction_completed_local": "2026-09-29T19:27:47+0800",
+    "pilot_run_interrupted_local": "2026-09-29T19:35:42+0800",
+    "complete_scored_cases": 0,
+    "ground_truth_access": false,
+    "formal_effect_access": false
+  },
+  "analysis_revision": {
+    "active_models": ["default", "synthstroke"],
+    "quantitative_denominator_per_model": 762,
+    "comparison_role": "exploratory same-cohort contemporary comparator",
+    "inference": "paired center-macro effect estimates and percentile 95% confidence intervals; no multiplicity-adjusted or architecture-superiority test",
+    "uncertainty_analysis": "unchanged for both active models",
+    "qualitative_display": "unchanged six performance-blinded cases, with ground-truth, default, and SynthStroke contours",
+    "uncompleted_variants": ["dtk10", "resunet"],
+    "uncompleted_variant_rule": "retain eligibility and feasibility records but report no numerical performance estimate"
+  },
+  "active_models": ["default", "synthstroke"],
+  "scorer_sha256": "f5b8ba7a70e44114c3cc65822426252324db1e40c727d6520d217452d2dc0aa4",
+  "figure_5_6_r_sha256": "c3f2df91238e65cb0fbf9a157064cd575eeeb9a9f32d49c3d0ae78e7c6bcdfca",
+  "qualitative_extractor_sha256": "7ee53f2832147bdb772077a7d0bb4b74578978d1079a0c52277bbc3aaf028df9",
+  "qualitative_r_sha256": "9f6a6c04d15e79fe2bc93abd0d51e143794357cc197929ababe0642d1ac0b600",
+  "claim_boundaries": [
+    "The comparison does not isolate architecture because preprocessing, training data composition, label design, and implementation differ.",
+    "The evaluation remains within one public release family and is not prospective or institutionally independent clinical validation.",
+    "Null or adverse SynthStroke results remain reportable and cannot trigger model removal or analysis redesign."
+  ]
+}

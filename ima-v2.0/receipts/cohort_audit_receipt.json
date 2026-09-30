@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "protocol_sha256": "4a6a1421310231ac21ae251a8aff7c1e22ef8bbedbb01a7d3e43c1dfafaf3b21",
+  "independence_audit_sha256": "3573e59204b54f844ad316b43824a37ccb6bc4bc4ab749926d8c229db0cf31ef",
+  "cohort_characterization_sha256": "0d6dfd73b96f1778d1dbedc4d1548a7faf16df23dca53bfd74e73c242634f3ef",
+  "restricted_case_characteristics_sha256": "15b3eab037e9117850996639a590f015240ddbe02136bbdd86c04100e23f859b",
+  "public_table_s4_sha256": "37e83544f4e3a092c419b0c91867955fac0d020a61a25ed96ed637df9b018ac1",
+  "public_table_s5_sha256": "d4f1d07143365139fa8a5e5d3717777dfd2ce6ea61436904abe2496aa467fd01"
+}

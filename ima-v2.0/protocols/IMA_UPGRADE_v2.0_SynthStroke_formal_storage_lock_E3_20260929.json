@@ -1,0 +1,28 @@
+{
+  "protocol_extension_id": "IMA-UPGRADE-v2.0-E3-SynthStroke-formal-storage",
+  "locked_date": "2026-09-29",
+  "lock_timing": "after outcome-blinded three-case feasibility PASS and before formal inference or outcome scoring",
+  "parent_E2_sha256": "e691384a78b3f81335745b3365d6912d598a7a9e650a95eff15c5373d3b4bda4",
+  "pilot_receipt_sha256": "adbbbea3fbb17dcbfad8798e6a88cf0547967f84e8ddc358fad9195980728c36",
+  "pilot_status": "PASS",
+  "pilot_effect_scoring": false,
+  "formal_runner_sha256": "39d6c3b09f3d4cba2d2e75b836711c9e0ca1cc9b2f9eb42f903d145a390ee12f",
+  "multimodel_scorer_sha256": "aef1bd595ab9e75ff7d79d56d86a6fd72c066b98c18071dc4755a1144694b7ba",
+  "formal_probability_storage": {
+    "npz_key": "foreground",
+    "dtype": "float16",
+    "channels": 1,
+    "spatial_crop": false,
+    "probability_thresholding": false,
+    "information_removed": "only the exactly complementary background channel 1-p",
+    "maximum_quantization_absolute_error": 0.00048828125
+  },
+  "unchanged": [
+    "model weights and six-class model output",
+    "preprocessing and native-space inverse transformation",
+    "argmax binary-mask rule",
+    "762-case denominator",
+    "metrics and analysis roles",
+    "no TTA, no MC dropout, and no postprocessing"
+  ]
+}

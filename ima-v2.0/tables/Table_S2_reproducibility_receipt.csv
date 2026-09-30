@@ -1,0 +1,45 @@
+Field,Value,Interpretation
+Protocol,ATLAS-SHIFT-v1.2,Locked formal evaluation
+Formal cohort,762 cases; R2_TEST=288; SOOP=157; R3_NEW=317,Fixed denominator
+Model,Task100_ATLAS_v2 3D full-resolution; nnUNetTrainerV2; nnUNetPlansv2.1,Existing model selected before formal prediction
+Folds,0;1;2;3;4,All five folds used
+Ensemble,Equal arithmetic mean of five fold softmax probabilities,Fixed inference contract
+TTA,false,Disabled before formal prediction
+Mixed precision,false,Disabled before formal prediction
+Post-processing,false,None applied
+Binary rule,Unchanged raw_value > 0.5,Prespecified locked rule
+Scoring repository,https://github.com/ezequieldlrosa/isles26,Official ISLES'26 metric repository
+Official scorer version,ISLES'26 official scorer repository snapshot at commit e589d022953f797bdc6acc1ce9701f793dab295a,Version is identified by immutable source commit
+Scoring repository commit,e589d022953f797bdc6acc1ce9701f793dab295a,Source commit used by the official scorer
+Official eval_utils SHA-256,73668f48b70a56fe1ce785701595627ac3a6086412fb0f85b211ff7dc09ffcfd,Exact official scorer file hash
+Panoptica commit,3cc264a470b5c02853aace0f30d6a9af21335abd,Supporting instance-matching implementation
+Scoring environment,Python 3.12.5; numpy 2.2.6; scikit-learn 1.6.1; scipy 1.18.1; panoptica 2.1.7; connected-components-3d 3.29.0; nibabel 5.3.3,Version-pinned environment
+Formal scorer SHA-256,0fe6631bcd50aabe1289422e3913ed31c0ebff96cd2a5b9c2cb85308e35c1732,Exact formal scorer script hash
+Formal analysis lock SHA-256,792cf3f39e5a4965c9da86ac8cbdffa4fc72fc0b1c2faa16382405508214d746,Lock used for the 762-case scoring run
+Formal preflight SHA-256,3fa592ac40c778a5c0afb4a13cef5d9c8251134db1894c41f647d32bb41cbe8e,Preflight receipt hash
+Formal launch receipt SHA-256,6ebf0764f5236775c8b187b1edbd3d13f9397a109e500c81032f1e18f4915b33,Formal launch receipt hash
+Formal completion audit SHA-256,63e686e95f5ceb5430eff9c197d7299ca771b4beb5c127a12832b894f107b9a5,Final output-integrity audit hash
+Output triplet manifest SHA-256,b35b5ea9fea7ba08a2db8260e855f72ab032f2dd9df8d43aaffd5b988433c6dd,Input/output triplet integrity manifest
+Resume behavior,Skipped exactly 240 verified case JSON files and scored the remaining 522; no overwrite,Fixed resume policy
+Geometry rule,Array-index scoring; equal shape and voxel size within 1e-6; no resampling,Official array-index implementation
+Bootstrap,10000 joint center-cluster repetitions; seed 260827; NumPy linear percentile,Prespecified primary uncertainty
+Completion audit,FINAL_OUTPUT_INTEGRITY_PASS; 762/762 scored; n_failed=0,Final execution integrity
+Upgrade protocol,IMA-UPGRADE-v2.0,Locked same-cohort model comparison and predictive-uncertainty extension
+Upgrade protocol SHA-256,4a6a1421310231ac21ae251a8aff7c1e22ef8bbedbb01a7d3e43c1dfafaf3b21,Immutable pre-effect protocol hash
+Comparator feasibility amendment SHA-256,259e6cfe558670ea3bca41ad024cf6d0080e6b26c107a637ccda69950c5b68a7,Outcome-blinded amendment reducing active comparators to Default and SynthStroke
+SynthStroke model ID,liamchalcroft/synthstroke-synth,Methodologically distinct contemporary comparator
+SynthStroke Hugging Face revision,ced72e683ed68d3d110b675714e1a07bac584948,Immutable model repository revision
+SynthStroke vendor commit,f627b57b8f9291bfa870cb54cb21ddbeb4941d39,Inference-code source revision
+SynthStroke weights SHA-256,328c2b49cdbc865fb327c35b341dfa306a3ffbf17363e20e9694da3271a6066c,Exact safetensors checkpoint hash
+SynthStroke config SHA-256,f94329dfb3a6ba7cde86d640f79bc54927c32d72ca8fe08b7a9f7ff9b798fbf8,Exact model configuration hash
+SynthStroke inference runner SHA-256,240d8e0663b991ad19d343998fc54b9f7cdf56763b670f0229cb85354125a719,Exact sharded CPU inference script hash
+Upgrade scorer SHA-256,f5b8ba7a70e44114c3cc65822426252324db1e40c727d6520d217452d2dc0aa4,Exact paired comparison; calibration; uncertainty; and risk-coverage scorer hash
+Training-evaluation identifier audit,PASS; training=655; formal=762; overlap=0; Pilot-36-formal overlap=0,Record-level separation gate
+Figure 5/6 renderer SHA-256,54b036cc89e31fb6ef2793a250ad55b8c5c633a1b2c1cb35fd007827371570d5,Post-effect renderer hash; source data and estimands unchanged
+Figure 4 renderer SHA-256,d59f8a00a4f6bbab3ae2406398f2d551fcd1b5eec0f1cd589b84606ea32535f1,Post-effect renderer hash; qualitative selection and source data unchanged
+Figure renderer compatibility amendment SHA-256,90f4fcc31229aaca3935315b57d16cd27d8ec6365ec8f8d04282c5c7ef018707,Documents a rendering-only repair after effect scoring
+SynthStroke shard 0 completion receipt SHA-256,943f26a91f1da81c093a70a2d243bdbac378114a78ab40ad13cff4869eb9f737,Frozen shard completed with verified nonempty output triplets
+SynthStroke shard 1 completion receipt SHA-256,300239a410333d934b9f1d5bf3119c3998b718909949aa4c873910fb7a3f8f11,Frozen shard completed with verified nonempty output triplets
+SynthStroke formal completion,"PASS; 762/762 NIfTI, NPZ, and PKL triplets; no empty files",Exact denominator gate passed before comparative scoring
+Multimodel result receipt SHA-256,91f60003ec5a3ad74b7f35540300b85e85ede64eb71c352711c1247c1510006b,Aggregate two-model comparison and uncertainty receipt
+Final submission source audit SHA-256,708649e44aac048fc16b5b51120e3eca4686b9be4dc2e7900b59a3b2a3f4282a,"Placeholder, word-limit, anonymization, claim, and figure audit"

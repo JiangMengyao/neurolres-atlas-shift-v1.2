@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "training_fold_index_n": 655,
+  "release_training_n": 655,
+  "formal_evaluation_n": 762,
+  "pilot_n": 36,
+  "training_fold_index_equals_release_training": true,
+  "training_formal_overlap_n": 0,
+  "training_pilot_overlap_n": 0,
+  "pilot_formal_overlap_n": 0,
+  "formal_case_ids_unique": true,
+  "fold_counts": {
+    "3": 131,
+    "4": 131,
+    "0": 131,
+    "1": 131,
+    "2": 131
+  },
+  "r2_center_n": 24,
+  "r3_center_n": 26,
+  "center_union_n": 46,
+  "shared_center_labels": [
+    "R005",
+    "R028",
+    "R029",
+    "R050"
+  ]
+}

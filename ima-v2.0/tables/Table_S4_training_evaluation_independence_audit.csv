@@ -1,0 +1,5 @@
+Audit comparison,"Set A, n","Set B, n","Overlap, n",Interpretation
+Official training fold index vs release training stratum,655,655,655,Exact identifier-set agreement
+Model training cohort vs formal evaluation cohort,655,762,0,No case-level training/evaluation overlap
+Model training cohort vs observed pilot cohort,655,36,0,No case-level training/pilot overlap
+Observed pilot cohort vs formal evaluation cohort,36,762,0,Pilot cases remained excluded from formal evaluation

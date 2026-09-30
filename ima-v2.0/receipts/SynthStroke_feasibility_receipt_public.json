@@ -1,0 +1,68 @@
+{
+  "protocol_extension": "IMA-UPGRADE-v2.0-E2-SynthStroke-exploratory",
+  "status": "PASS",
+  "mode": "pilot",
+  "started_utc": "2026-09-29T11:06:23.377694+00:00",
+  "finished_utc": "2026-09-29T11:07:30.767375+00:00",
+  "input_n": 3,
+  "state": {
+    "nii": 3,
+    "npz": 3,
+    "pkl": 3,
+    "expected": 3,
+    "complete": true
+  },
+  "weight_provenance": {
+    "model_id": "liamchalcroft/synthstroke-synth",
+    "hugging_face_revision": "ced72e683ed68d3d110b675714e1a07bac584948",
+    "vendor_commit": "f627b57b8f9291bfa870cb54cb21ddbeb4941d39",
+    "model_sha256": "328c2b49cdbc865fb327c35b341dfa306a3ffbf17363e20e9694da3271a6066c",
+    "config_sha256": "f94329dfb3a6ba7cde86d640f79bc54927c32d72ca8fe08b7a9f7ff9b798fbf8",
+    "config": {
+      "spatial_dims": 3,
+      "in_channels": 1,
+      "out_channels": 6,
+      "channels": [
+        32,
+        64,
+        128,
+        256,
+        320,
+        320
+      ],
+      "strides": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "kernel_size": 3,
+      "up_kernel_size": 3,
+      "num_res_units": 1,
+      "act": "PRELU",
+      "norm": "INSTANCE",
+      "dropout": 0.0,
+      "bias": true,
+      "adn_ordering": "NDA",
+      "model_type": "synth"
+    }
+  },
+  "settings": {
+    "device": "cpu",
+    "patch_size": 192,
+    "spacing_mm": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "tta": false,
+    "mc_dropout": false,
+    "postprocessing": "none",
+    "native_binary_rule": "argmax across six class probabilities equals stroke class 5"
+  },
+  "ground_truth_access": false,
+  "effect_scoring": false,
+  "restricted_receipt_sha256": "adbbbea3fbb17dcbfad8798e6a88cf0547967f84e8ddc358fad9195980728c36",
+  "privacy_note": "Outcome-blinded case tokens and file-level records were removed from the public receipt."
+}

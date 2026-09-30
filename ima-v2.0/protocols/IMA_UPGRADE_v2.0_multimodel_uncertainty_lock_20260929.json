@@ -1,0 +1,134 @@
+{
+  "protocol_id": "IMA-UPGRADE-v2.0",
+  "locked_at_utc": "2026-09-29T10:34:39Z",
+  "status": "LOCKED_BEFORE_COMPARATOR_INFERENCE_OR_SCORING",
+  "relationship_to_original_study": {
+    "original_protocol": "NEUROLRES-ATLAS-SHIFT-v1.2",
+    "original_primary_endpoint_unchanged": true,
+    "original_primary_result_unchanged": true,
+    "upgrade_analyses_role": "separately locked comparative and exploratory extension",
+    "no_reclassification_of_original_negative_decision": true
+  },
+  "frozen_inputs": {
+    "formal_mapping": {
+      "path": "data/authorized/atlas_r3/formal_v1.2/inference/restricted_token_mapping.csv",
+      "sha256": "3d50730735050aacb65e88634b4ca83ae2ecf43f23790f750d60e847d01d1b1d",
+      "n": 762,
+      "strata": {
+        "R2_TEST": 288,
+        "SOOP": 157,
+        "R3_NEW": 317
+      }
+    },
+    "original_case_metrics": {
+      "path": "data/authorized/atlas_r3/formal_v1.2/metrics/NEUROLRES_ATLAS_SHIFT_v1.2_formal_case_metrics.csv",
+      "sha256": "717a853f203b24adab92935cb046c8778cee994db17ca355ede21caab4c44f90"
+    },
+    "training_fold_index": {
+      "path": "models/vendor/ATLAS-R2-Docker-Submission/fold_index.csv",
+      "sha256": "a0877b8da2131e8b6f624738be713977b966fc5112aa9b9dc1902b2ff0b1dcd8",
+      "n": 655
+    },
+    "dataset_contract": {
+      "path": "protocols/NEUROLRES_ATLAS_SHIFT_v1.2_dataset_contract_20260827.json",
+      "sha256": "fe83bd8443db12e4bbaf7dec0311ae8731ebae0a8cb9e692cc8d298959cbdb14"
+    }
+  },
+  "model_set": [
+    {
+      "model_id": "MAPPING_DEFAULT",
+      "architecture": "3D nnU-Net",
+      "trainer": "nnUNetTrainerV2",
+      "plans": "nnUNetPlansv2.1",
+      "folds": [0, 1, 2, 3, 4],
+      "weights_status_at_lock": "locally verified"
+    },
+    {
+      "model_id": "MAPPING_DTK10",
+      "architecture": "3D nnU-Net",
+      "trainer": "nnUNetTrainerV2_800epochs_Loss_DiceTopK10",
+      "plans": "nnUNetPlansv2.1",
+      "folds": [0, 1, 2, 3, 4],
+      "weights_status_at_lock": "official SharePoint folder identified; not yet downloaded"
+    },
+    {
+      "model_id": "MAPPING_RESUNET",
+      "architecture": "3D residual nnU-Net",
+      "trainer": "nnUNetTrainerV2_ResencUNet_DA3",
+      "plans": "nnUNetPlans_FabiansResUNet_v2.1",
+      "folds": [0, 1, 2, 3, 4],
+      "weights_status_at_lock": "official SharePoint folder identified; not yet downloaded"
+    }
+  ],
+  "model_provenance": {
+    "repository": "https://github.com/King-HAW/ATLAS-R2-Docker-Submission",
+    "repository_commit": "465ec87689d004c175b47b6dec3240ea9378348e",
+    "official_weight_share": "https://emckclac-my.sharepoint.com/:f:/g/personal/k21066681_kcl_ac_uk/EnR3LgIE5D5En1c2vSlzPkgBnzKJJ8Cly_2T56srvbu67A",
+    "training_data_claim": "ATLAS R2 public training cohort represented by the repository fold_index.csv",
+    "eligibility_gate": "all 655 training identifiers must be unique and have zero case-level overlap with all 762 formal evaluation identifiers before comparator inference"
+  },
+  "inference_contract": {
+    "fixed_n": 762,
+    "same_input_symlinks_for_all_models": true,
+    "fold_probability_aggregation": "equal arithmetic mean across five folds",
+    "tta": false,
+    "mixed_precision": false,
+    "postprocessing": "none",
+    "foreground_threshold": 0.5,
+    "save_binary_nifti": true,
+    "save_probability_npz": true,
+    "overwrite_existing_complete_triplets": false,
+    "failed_cases_remain_in_denominator": true,
+    "feasibility_run": "inference only on v12f0001, v12f0289, and v12f0446; no ground-truth access or effect scoring before the full-run decision"
+  },
+  "comparative_analysis": {
+    "primary_upgrade_estimands": [
+      "MAPPING_DTK10 minus MAPPING_DEFAULT center-macro lesion-wise F1 in R3_NEW",
+      "MAPPING_RESUNET minus MAPPING_DEFAULT center-macro lesion-wise F1 in R3_NEW"
+    ],
+    "primary_interval": "paired 46-center union bootstrap with 10000 repetitions",
+    "primary_seed": 260929,
+    "primary_multiplicity": "Holm correction across the two comparator-versus-default R3_NEW tests",
+    "secondary_estimands": [
+      "model-specific R2_TEST minus R3_NEW center-macro lesion-wise F1 gap",
+      "pairwise center-macro lesion-wise F1 differences in R2_TEST",
+      "case-level Dice, lesion-wise F1, PR-AUC, absolute volume error, and absolute lesion-count error by stratum",
+      "SOOP model comparisons reported descriptively only"
+    ],
+    "secondary_interpretation": "effect estimates and 95% intervals; no architecture superiority claim from secondary tests"
+  },
+  "predictive_uncertainty_analysis": {
+    "role": "exploratory quality-control analysis",
+    "brain_mask": "finite nonzero voxels of the source T1 image in unchanged array-index space",
+    "probability_definition": "five-fold mean foreground probability",
+    "calibration_metrics": [
+      "whole-brain Brier score",
+      "class-balanced Brier score with equal lesion and non-lesion weight",
+      "10-bin equal-width reliability curve within the brain mask"
+    ],
+    "case_uncertainty_score": "mean binary entropy among brain-mask voxels with foreground probability >= 0.01",
+    "quality_association": "Spearman correlation between case uncertainty and one minus Dice, overall and by stratum",
+    "risk_coverage": "mean Dice after retaining the lowest-uncertainty 100%, 90%, 80%, 70%, 60%, and 50% of cases; ties resolved by token",
+    "no_threshold_tuning": true,
+    "claim_boundary": "predictive confidence and retrospective quality-control utility, not calibrated clinical uncertainty or deployment safety"
+  },
+  "cohort_and_independence_extension": {
+    "report_by_stratum": [
+      "ground-truth lesion volume distribution",
+      "ground-truth lesion-count distribution",
+      "center sample-size distribution",
+      "empty-ground-truth frequency"
+    ],
+    "training_evaluation_overlap": "exact normalized case identifier intersection",
+    "pilot_formal_overlap": 0,
+    "causal_source_claims_permitted": false,
+    "prospective_external_validation_claims_permitted": false
+  },
+  "stop_rules": [
+    "exclude a comparator before scoring if any official weight file is missing, corrupt, or incompatible with its declared trainer/plans",
+    "exclude a comparator before scoring if training/evaluation case overlap is nonzero or cannot be resolved",
+    "do not replace an excluded comparator with a model selected after viewing formal outcomes",
+    "do not optimize thresholds, postprocessing, subsets, or endpoints after viewing comparator outcomes",
+    "report null or adverse comparator results without model removal"
+  ]
+}

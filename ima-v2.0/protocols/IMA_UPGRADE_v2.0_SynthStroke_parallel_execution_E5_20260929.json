@@ -1,0 +1,24 @@
+{
+  "protocol_extension_id": "IMA-UPGRADE-v2.0-E5-SynthStroke-parallel-execution",
+  "recorded_date": "2026-09-29",
+  "timing": "after 22 complete formal outputs and before any SynthStroke ground-truth scoring or effect access",
+  "parent_extension": {
+    "path": "protocols/IMA_UPGRADE_v2.0_exploratory_SynthStroke_lock_E2_20260929.json",
+    "storage_clarification": "protocols/IMA_UPGRADE_v2.0_SynthStroke_formal_storage_lock_E3_20260929.json"
+  },
+  "reason": "Single-process CPU inference averaged approximately 52 seconds per ordinary case. Fixed index sharding reduces elapsed time without changing case inputs, model state, preprocessing, prediction, probability storage, or scoring.",
+  "execution": {
+    "shard_count": 2,
+    "assignment": "zero-based row index in the frozen 762-row mapping modulo 2",
+    "shard_indices": [0, 1],
+    "torch_threads_per_shard": 4,
+    "shared_output_directory": "data/authorized/atlas_r3/formal_v1.2/comparators/synthstroke/full_output_no_tta",
+    "existing_complete_triplets": "skipped without overwrite",
+    "partial_output_handling": "the interrupted v12f0023 NIfTI was quarantined before relaunch and will be regenerated as a complete triplet",
+    "final_gate": "all 762 NIfTI, NPZ, and PKL triplets must be present and nonempty before any scoring"
+  },
+  "scientific_contract_unchanged": true,
+  "ground_truth_access": false,
+  "effect_access": false,
+  "runner_sha256": "240d8e0663b991ad19d343998fc54b9f7cdf56763b670f0229cb85354125a719"
+}

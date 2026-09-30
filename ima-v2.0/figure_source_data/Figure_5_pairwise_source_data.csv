@@ -1,0 +1,3 @@
+comparator,comparator_label,reference,stratum,analysis_role,estimate,ci_lower,ci_upper,p_raw,center_n,p_holm
+synthstroke,SynthStroke (2025),default,R3_NEW,exploratory contemporary comparator,-0.15118808743573067,-0.24051408035797023,-0.07563845406469953,,26,
+synthstroke,SynthStroke (2025),default,R2_TEST,exploratory contemporary comparator,-0.23244548608364876,-0.2735862940292304,-0.19072218182307726,,24,
